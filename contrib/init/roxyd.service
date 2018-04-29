@@ -1,0 +1,26 @@
+[Unit]
+Description=ROXY's distributed currency daemon
+After=network.target
+
+[Service]
+User=roxy
+Group=roxy
+
+Type=forking
+PIDFile=/var/lib/roxyd/roxyd.pid
+
+ExecStart=/usr/bin/roxyd -daemon -pid=/var/lib/roxyd/roxyd.pid \
+          -conf=/etc/roxy/roxy.conf -datadir=/var/lib/roxyd
+
+ExecStop=-/usr/bin/roxy-cli -conf=/etc/roxy/roxy.conf \
+         -datadir=/var/lib/roxyd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

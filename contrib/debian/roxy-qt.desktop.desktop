@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=ROXY
+Comment=ROXY P2P Cryptocurrency
+Exec=roxy-qt %u
+Terminal=false
+Type=Application
+Icon=roxy128
+MimeType=x-scheme-handler/roxy;
+Categories=Office;Finance;
+Name[en_US]=roxy-qt.desktop

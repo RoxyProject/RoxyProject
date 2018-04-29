@@ -1,0 +1,11 @@
+[Protocol]
+exec=roxy-qt '%u'
+protocol=roxy
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

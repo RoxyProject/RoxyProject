@@ -1,0 +1,26 @@
+# /etc/conf.d/roxyd: config file for /etc/init.d/roxyd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/roxy/roxy.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/roxyd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/roxyd.pid"
+
+# Where to write roxyd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/roxyd"
+
+# User and group to own roxyd process
+#BITCOIND_USER="roxy"
+#BITCOIND_GROUP="roxy"
+
+# Path to roxyd executable
+#BITCOIND_BIN="/usr/bin/roxyd"
+
+# Nice value to run roxyd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
